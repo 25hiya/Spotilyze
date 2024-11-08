@@ -7,8 +7,12 @@ import java.net.http.HttpResponse;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
+import java.util.HashMap;
 
 public class APITokenGetterClass {
+
+  public static String accessToken = "BQD51HZA_v15mZXaPi8WxM8KjcgqPovQ1qlbqCKP5MNFC8JGeRxtHa5V16tVKjIfj34UWv8JxP9VX5q9iYIkwww1tO4InLK45ggpTyvXnVSY5Kw9xig";
+
   public static void main(String[] args) {
     String clientId = "16b096a1941b433cbb6e44973a7fc00c";  // Replace with your actual Client ID
     String clientSecret = "1a0e9d11b95d453ab5e030db0c734990";  // Replace with your actual Client Secret
@@ -64,5 +68,10 @@ public class APITokenGetterClass {
     int tokenStart = responseBody.indexOf(tokenPrefix) + tokenPrefix.length();
     int tokenEnd = responseBody.indexOf("\"", tokenStart);
     return responseBody.substring(tokenStart, tokenEnd);
+  }
+  public static HashMap getAuthToken(){
+    HashMap returnDict = new HashMap();
+    returnDict.put("Authorization", "Bearer" + accessToken);
+    return returnDict;
   }
 }
