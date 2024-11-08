@@ -5,7 +5,7 @@
 Hiya Thakkar (25hiya)<br/>
 Defne Eris (erisdefne)<br/>
 Xinyan Wei (xinyan100)<br/>
-Hargun Kaur Badhesha<br/>
+Hargun Kaur Badhesha (hargunbadhesha)<br/>
 Enver Azad Chowdhury
 
 **Description:**
