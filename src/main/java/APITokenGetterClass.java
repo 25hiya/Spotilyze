@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 public class APITokenGetterClass {
 
-  public static String accessToken = "BQD51HZA_v15mZXaPi8WxM8KjcgqPovQ1qlbqCKP5MNFC8JGeRxtHa5V16tVKjIfj34UWv8JxP9VX5q9iYIkwww1tO4InLK45ggpTyvXnVSY5Kw9xig";
+  public static String accessToken = "BQA0fh69xqGkhPmQyaklPKBFOESxqKea5ZFfPkm--pDcv1D-1o5MqdinuxMke2BmI1z8GiaHsrBqqQ_LUKGhzg2XaAJrfBB2CJpNGC6bhEZ2x35Q2_s";
 
   public static void main(String[] args) {
     String clientId = "16b096a1941b433cbb6e44973a7fc00c";  // Replace with your actual Client ID
