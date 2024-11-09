@@ -12,10 +12,11 @@ import java.util.HashMap;
 public class APITokenGetterClass {
 
   public static String accessToken = "BQA0fh69xqGkhPmQyaklPKBFOESxqKea5ZFfPkm--pDcv1D-1o5MqdinuxMke2BmI1z8GiaHsrBqqQ_LUKGhzg2XaAJrfBB2CJpNGC6bhEZ2x35Q2_s";
+  public static String clientId = "16b096a1941b433cbb6e44973a7fc00c";  // Replace with your actual Client ID
+  public static String clientSecret = "1a0e9d11b95d453ab5e030db0c734990";  // Replace with your actual Client Secret
+  public static String redirectUri = "http://localhost:3000/callback";
 
   public static void main(String[] args) {
-    String clientId = "16b096a1941b433cbb6e44973a7fc00c";  // Replace with your actual Client ID
-    String clientSecret = "1a0e9d11b95d453ab5e030db0c734990";  // Replace with your actual Client Secret
 
     try {
       // Create a client for sending HTTP requests

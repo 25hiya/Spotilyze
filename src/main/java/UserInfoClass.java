@@ -51,8 +51,8 @@ public class UserInfoClass {
 
     public static void main(String[] args) {
         try { // Replace with actual token from getToken()
-            String userName = "Defne Eriş"; // Replace with the artist's name
-            searchUser("me");
+            String userName = "vsancakdar"; // Replace with the user's name
+            searchUser(userName);
         } catch (IOException e) {
             e.printStackTrace();
         }
