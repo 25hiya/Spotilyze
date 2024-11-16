@@ -33,10 +33,10 @@ public class serverSetup {
 
         if (code != null) {
             // Here, call getToken(code) with the extracted code
-            System.out.println("Authorization code received: " + code);
             // In real implementation, call your token exchange logic here
             try {
                 LoginClass.getToken(code);
+                System.out.println("Authorization code received: " + code);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

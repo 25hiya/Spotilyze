@@ -23,8 +23,12 @@ public class LoginClass{
 
     public static void main(String[] args) throws Exception {
         serverSetup.main(args);
-        if (getStoredToken("access_token") == null) {
-            redirectToSpotifyAuthorize();
+        if (getStoredToken("access_token") == null || isTokenExpired()) {
+            if (getStoredToken("refresh_token") != null) {
+                refreshToken();
+            } else {
+                redirectToSpotifyAuthorize();
+            }
         } else {
             String accessToken = getStoredToken("access_token");
             getUserData(accessToken);
@@ -114,7 +118,20 @@ public class LoginClass{
 
             JSONObject jsonResponse = new JSONObject(response.toString());
             storeToken("access_token", jsonResponse.getString("access_token"));
+
+            int expiresIn = jsonResponse.getInt("expires_in");
+            long expiryTime = System.currentTimeMillis() + (expiresIn * 1000);
+            storeToken("expires", String.valueOf(expiryTime));
         }
+    }
+
+    // Checks if the token is expired
+    private static boolean isTokenExpired() {
+        String expiryTimeStr = getStoredToken("expires");
+        if (expiryTimeStr == null) return true;
+
+        long expiryTime = Long.parseLong(expiryTimeStr);
+        return System.currentTimeMillis() >= expiryTime;
     }
 
     // Fetches user data using the access token
