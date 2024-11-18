@@ -14,7 +14,7 @@ public class ArtistInfoClass {
 
     public static void searchArtist(String artistName) throws IOException {
         // Construct the query URL
-        String token = "BQAUA8I2FTigShCCQH2K058Zk_Ym6UeDAHWGs8lBp1mEjrrUkdXWl1jz_LWfhu14KysCP-7DjWpOMPlJMHSR3Vh2H2IgB-XvE-jj4KTyWOYj7WJK3qXLLNQwRsN-SDadyf4UwkLnexbdl2kByNngHkR3AtT4cgnF0lmqWD4P6iLg7Nb0SmbLxgk7u46h0QMryA9lgXzP6glBbrd5qwYdHEY_PkbnRw";
+        String token = "BQB2X18TWo-yKhrm7tBYVyLlcDGFY_TejRyA1AL_MnZu0wO67SNbZ9do0EUYck7G1BXrW4R4tOElBx7t4i_faNXipVK6mRtZyHF1xWMcKKlJYmPrlJ20Ptq53oP21_HWbhvtJDqKJTjUCVak-luRZYP60_aWOMYl-JOSOUIMg2NcdGYcNIIG4T8rdI8Zze3J2BP00qqL4k_2kHOsoWUfQ4894a96dw";
         String query = "?q=" + artistName + "&type=artist&limit=1";
         String queryUrl = SEARCH_URL + query;
 
