@@ -14,7 +14,7 @@ public class UserInfoClass {
 
     public static void searchUser(String userName) throws IOException {
         // Construct the query URL
-        String token = "BQB2X18TWo-yKhrm7tBYVyLlcDGFY_TejRyA1AL_MnZu0wO67SNbZ9do0EUYck7G1BXrW4R4tOElBx7t4i_faNXipVK6mRtZyHF1xWMcKKlJYmPrlJ20Ptq53oP21_HWbhvtJDqKJTjUCVak-luRZYP60_aWOMYl-JOSOUIMg2NcdGYcNIIG4T8rdI8Zze3J2BP00qqL4k_2kHOsoWUfQ4894a96dw";
+        String token = "BQBV9gwcYrTJ5ze_am1Vi0JwpK7iUww_iNf2K_Ue9cQKUtm32y7C9nJ3GyIo2bIeTziZ2xEtxua1fRUV3f59lp3Klqe6QHIzeT2977ewuutZNx07dEsKUOdKJI82uSqphQ4UVp9FtRrrJDGbs1bo_NlzZbcueOjcFUHfs6jazKZO8zl9ljYd5RnHhGHtWZNQc-8cFtA6eJsZtBMfs1U3QVYhCudjyg";
         String queryUrl = SEARCH_URL + userName;
 
         //https://api.spotify.com/v1/me
@@ -51,7 +51,7 @@ public class UserInfoClass {
 
     public static void main(String[] args) {
         try { // Replace with actual token from getToken()
-            String userName = "me"; // Replace with the user's name
+            String userName = "users/8uzkpaury9t8y6w8unavjex3s"; // Replace with the user's name
             searchUser(userName);
         } catch (IOException e) {
             e.printStackTrace();
