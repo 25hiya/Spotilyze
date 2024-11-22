@@ -28,6 +28,8 @@ public class LoginClass{
                 refreshToken();
             } else {
                 redirectToSpotifyAuthorize();
+                while (getStoredToken("access_token") == null) {}
+                System.out.println("Recieved: " + getStoredToken("access_token"));
             }
         } else {
             String accessToken = getStoredToken("access_token");
