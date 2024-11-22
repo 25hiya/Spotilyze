@@ -10,11 +10,11 @@ import main.java.APITokenGetterClass;
 
 public class UserInfoClass {
 
-    private static final String SEARCH_URL = "https://api.spotify.com/v1/users/";
+    private static final String SEARCH_URL = "https://api.spotify.com/v1/";
 
     public static void searchUser(String userName) throws IOException {
         // Construct the query URL
-        String token = APITokenGetterClass.accessToken;
+        String token = "BQD-8VdswZb3JaPuD2CspS9tOy-9WheBaogDGWFYSNIHvqwjIVn_MBldJn_NxDXpAzLj60nKUjBVsju_9B3gnbRH2DpZniAJQl02cLu3-JaOHQDv1kBW7lsgsWMi0_XCLmApTERODVngErdPRJ5b73dejT7fiSKjox2yf1xw-w3d5rQmNuM6apLengt69C7QrXIpLMpiZJyHZ5bQ50hIdtnHPqqhHg";
         String queryUrl = SEARCH_URL + userName;
 
         //https://api.spotify.com/v1/me
@@ -51,7 +51,7 @@ public class UserInfoClass {
 
     public static void main(String[] args) {
         try { // Replace with actual token from getToken()
-            String userName = "vsancakdar"; // Replace with the user's name
+            String userName = "me"; // Replace with the user's name
             searchUser(userName);
         } catch (IOException e) {
             e.printStackTrace();

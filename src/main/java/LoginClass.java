@@ -87,6 +87,7 @@ public class LoginClass{
             JSONObject jsonResponse = new JSONObject(response.toString());
             storeToken("access_token", jsonResponse.getString("access_token"));
             storeToken("refresh_token", jsonResponse.optString("refresh_token", null));
+            System.out.println(jsonResponse.getString("access_token"));
         }
     }
 
